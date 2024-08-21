@@ -1,0 +1,85 @@
+#Question 1
+def welcome_Message(x) :
+    print("Welcome to the python programming course",x)
+name="kujn"
+welcome_Message(name)
+
+#question 2
+def display_even(number):
+    if number % 2 == 0: 
+        print(number)    
+
+
+display_even(4) 
+display_even(7)  
+display_even(10) 
+
+#question 3
+list_1=[4,2,6,9,2,3]
+def check_even(list_x):
+    for i in range (0,len(list_x)):
+        if list_x[i]%2==0:
+            print(list_x[i])
+check_even(list_1)
+
+#Question 4
+def calculate_area (length, width):
+    area = length*width
+    return area
+area = calculate_area(6,7)
+print(area)
+
+#question 5
+
+list_y=[1,2,3]
+def findmax(y):
+    maximum=max(y)
+maximum=findmax(list_y)
+
+#question 6
+list_W=[1,-9,6,-8,4,-1]
+def filter_positive(numbers):
+    list_z=[]
+    for num in numbers:
+        if num>0:
+            list_z.append(num)
+    return list_z
+positive_list=filter_positive(list_W)
+print(positive_list)
+
+#Question 7
+import random
+def random_number_generator():
+    a=random.randint(1,50)
+    return a
+list_num=[]
+a= random_number_generator()    
+for i in range(0,5):
+    number=int(input("Enter your guess"))
+    list_num.append(number)
+print("your guesses :",list_num, "and lucky number :",a)
+
+#question 8
+def validate_age():
+    while True:
+        try:
+            age = int(input("Please enter your age: "))
+            if age < 18 or age > 65:
+                print("Error: Age must be between 18 and 65.")
+            else:
+                if 18 <= age <= 35:
+                    print("You are eligible for a Youth Loan.")
+                elif 36 <= age <= 65:
+                    print("You are eligible for a Standard Loan.")
+                return
+        except ValueError:
+            print("Error: Please enter a valid integer.")
+
+validate_age()
+
+ 
+    
+
+            
+    
+    
